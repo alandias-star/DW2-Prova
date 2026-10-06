@@ -1,0 +1,326 @@
+/* ==========================================================================
+   PALETA DE CORES E VARIÁVEIS GLOBAIS 
+   ========================================================================== */
+   :root {
+    --primary: #ff5722;
+    --primary-hover: #e64a19;
+    --secondary: #007bff;
+    --secondary-hover: #0056b3;
+    --danger: #dc3545;
+    --danger-hover: #bd2130;
+    --bg-color: #f4f4f9;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --border-color: #dddddd;
+    --paper: #f8f9fa;
+    --ink: #151710;
+    --slate: #5a6472;
+    --mist: #e9ecef;
+    --line: #dde1e5;
+    --signal: #e5372a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --font-serif: "Playfair Display", serif;
+    --font-sans: "Plus Jakarta Sans", sans-serif;
+  }
+  [data-theme="dark"] {
+    --paper: #121212;
+    --card-bg: #1e2228;
+    --ink: #f0f0f0;
+    --slate: #a0aab6;
+    --mist: #2a2f38;
+    --line: #2d333c;
+  }
+  
+  /* ==========================================================================
+      RESET E ESTILOS BASE
+     ========================================================================== */
+     * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        background-color: var(--paper);
+        color: var(--ink);
+        font-family: var(--font-sans);
+        line-height: 1.5;
+        transition: 0.3s;
+      }
+  
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  /* ==========================================================================
+    SEÇÃO DESTAQUE 
+   ========================================================================== */
+
+
+  
+  .hero {
+    font-family: var(--font-serif);
+    padding: 2rem 0;
+  }
+  
+  .hero article
+   {
+    border-bottom: 5px solid var(--ink);
+  }
+  
+  .hero h2 {
+    font-size: 2.3rem;
+    margin: 0.5rem 0;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--slate);
+    margin-bottom: 0.8rem;
+  }
+  
+  /* ==========================================================================
+      CABEÇALHO E NAVEGAÇÃO PRINCIPAL 
+     ========================================================================== */
+     #theme {
+        background: none;
+        border: 1px solid var(--line);
+        color: var(--ink);
+        padding: 4px 10px;
+        border-radius: 12px;
+      }
+
+      #theme:hover {
+    background: var(-);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(137, 34, 255, 0.4);
+    text-decoration: none;
+      }
+
+  .main-header {
+    background: var(--card-bg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-bottom: 3px solid var(--ink);
+    margin-bottom: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .brand-icon {
+    font-size: 1.8em;
+    background: rgba(255, 87, 34, 0.1);
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brand-title {
+    font-size: 1.6em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .brand-title span {
+    color: var(--slate);
+  }
+  
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--slate);
+    color: #ffffff;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(255, 87, 34, 0.3);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-btn:hover {
+    background: var(--secondary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255, 87, 34, 0.4);
+    text-decoration: none;
+  }
+  
+  .nav-btn-outline {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+  }
+  
+  .nav-btn-outline:hover {
+    background: var(--bg-color);
+    border-color: var(--text-muted);
+    box-shadow: none;
+  }
+  
+  /* ==========================================================================
+     CARDS E FORMULÁRIOS
+     ========================================================================== */
+  .card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  
+  button,
+  input,
+  select {
+    padding: 10px;
+    margin: 4px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.95em;
+  }
+  
+  button {
+    background: var(--secondary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background: var(--secondary-hover);
+  }
+  
+  .danger {
+    background: var(--danger);
+  }
+  
+  .danger:hover {
+    background: var(--danger-hover);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+ 
+ 
+  /* ==========================================================================
+     GRADE DE PRODUTOS E CARRINHO DE COMPRAS
+     ========================================================================== */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .prod-item,
+  .cart-item {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 6px;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .prod-item img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .cart-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .carrinho-opcoes {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  hr {
+    margin: 15px 0;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  /* ==========================================================================
+    RODAPÉ 
+   ========================================================================== */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background-color: var(--card-bg);
+    border-top: 2px solid var(--line);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: var(--slate);
+
+  }
+  /* ==========================================================================
+     RESPONSIVIDADE
+     ========================================================================== */
+  
+  @media (max-width: 600px) {
+    .header-container {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+  
+    main {
+      padding: 0 10px;
+    }
+  
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+  
